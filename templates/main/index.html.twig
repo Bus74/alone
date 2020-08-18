@@ -1,0 +1,163 @@
+{# templates/main/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+<div class="page-content p-4" id="content">
+    <!-- Toggle -->
+    <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill  shadow-sm px-3 mb-4"><i class="fa fa-bars mr-0"></i></button>
+
+ <!-- Titre  -->
+    {# Affichage de tous les flash messages de type "success" #}
+    {% for message in app.flashes('success') %}
+    <div style="color:white;">{{ message }}</div>
+    {% endfor %}
+
+    <h1 class="display-4 ">Restaurant La Cadole</h1>
+    <p class="lead text-white mt-4 mb-5">Cuisine des terroirs. Gastronomie des saveurs.</p>
+
+    <hr class="style">
+
+    <!--Images-->
+    <div class="row text-white ">
+
+        <div class=" col-lg-6 ">
+            <img class="first-photo " style="width:100%; height:auto" src="images/grapes.jpg" alt="grapes">
+            <img class="first-photo  mt-4" style="width:100%; height:auto" src="images/plat.jpg" alt="plat">
+        </div>
+        <div class="col-lg-6 "> 
+            <img class="first-photo " style="width:100%; height:auto" src="images/vin.jpg" alt="vin">
+            <img class="first-photo  mt-4" style="width:100%; height:auto" src="images/dessert1.jpg" alt="dessert">
+        </div>
+
+        <div class=" tag col-lg-8 offset-2 mt-5 align-self-center">
+            <p class="lead-title">Au sein d'une architecture atypique du VIIIème siècle aux couleurs oranges des carrières de Givry, la Cadole vous accueille dans une atmosphère médiévale avec son caveau du VIIIème siècle, privilégiant une ambiance conviviale et familiale.</p>
+        </div>
+    
+   
+        <div class="tag col-12 mt-2">
+            <div class="row">
+                <div class=" menu-test col-lg-6 d-flex align-self-center ">
+                    <div class=" white-card bg-white p-3 rounded my-5 ">
+                        <h2 class= "lead font-italic mb-2 text-muted"> Notre menu </h2>
+                        <p class="lead font-italic mb-0 text-muted">La Cadole vous propose une gastronomie régionale dont les plats, préparés selon les recettes traditionnelles, parlent des terroirs et des saveurs.</br>
+                        <a href="menu_cadole.html" class="btn btn-dark btn-lg active mt-4 mb-0" role="button" title="Lien 1">Menu</a></p>
+                    </div> 
+                </div>
+                <div class="col-lg-6 mt-4">
+                <img class="first-photo  mt-4" style="width:100%; height:auto" src="images/verres.png" alt="dessert"> 
+                </div>
+            </div>
+        </div>
+
+
+        <div class="tag col-12 mt-2">
+            <div class="row">
+                <div class="col-lg-6 mt-4">
+                    <img class="first-photo  mt-4" style="width:100%; height:auto" src="images/salade.png" alt="salade"> 
+                </div>
+                <div class=" menu-test col-lg-6 d-flex align-self-center ">
+                    <div class=" white-card bg-white p-3 rounded my-5 ">
+                        <h2 class= "lead font-italic mb-2 text-muted"> Nos Horraires </h2>
+                        <p class="lead font-italic mb-0 text-muted">Midi : 12h-14h.</br>
+                        Soir : 19h-22h.</br>
+                        Le restaurant La Cadole vous accueille tous les jours de la semaine à l'exception du  Mardi et du Mercredi.</br>
+                        <a href="#" class="btn btn-dark btn-lg active mt-4 mb-0" role="button" title="Lien 1">Réservation</a></p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="tag col-12 mt-2">
+            <div class="row">
+                <div class=" menu-test col-lg-6 d-flex align-self-center ">
+                    <div class="white-card bg-white p-3 rounded my-5 ">
+                        <h2 class= "lead font-italic mb-2 text-muted"> Nous Trouver </h2>
+                        <p class="lead font-italic mb-0 text-muted">Au coeur du centre ville de Givry, village à la renomée viticole réputé pour ses monuments historiques et ses vins...</br>
+                        <a href="map.html" class="btn btn-dark btn-lg active mt-4 mb-0" role="button" title="Lien 1">Géolocalisation</a></p>
+                    </div> 
+                </div>
+                <div class="col-lg-6 mt-4">
+                <img class="first-photo givry  mt-4" style="width:100%; height:auto" src="images/map.jpg" alt="dessert"> 
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row text-center">
+            <div class=" tag col-lg-8 offset-2 mt-5">
+                <p class="lead-title">La Cadole vous propose au quotidien un travail de produits frais et les saveurs de nos productions locales.</br>
+                Au fil des saisons, la carte bouge en conservant ses fleurons des terroirs.
+                </p>
+            </div>
+        
+        
+        
+        <!--Cards Flip-->
+        <div class="tag col-12 offset-0 mt-5 mb-5">
+            <div class="row text-center">
+                <div class="col-12">
+
+                    <div class="flip">
+                        <div class="front"  style="background-image: url(https://cdn.pixabay.com/photo/2016/03/11/19/28/fern-1250903_1280.jpg)">
+                        <h1 class="text-shadow">NOS SERVICES</hi>
+                        </div>
+                        <div class="back">
+                            <h2>Nos services</h2>
+                            <p>Pour les grandes tables, les moments particuliers, nous sommes à votre disposition pour toute composition de menus selon votre choix que vous pouvez déguster sur place ou bien en utilisant notre service à emporter.
+                            A votre disposition, une carte "traiteur" pour toute commande à emporter pour baptêmes, mariages, anniversaires et fiestas.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flip flip-vertical">
+                        <div class="front" style="background-image: url(images/cadole.JPG)">
+                        <h1 class="text-shadow">LES INCONTOURNABLES</hi>
+                        </div>
+                        <div class="back">
+                        <h2>Quelques incontournables</h2>
+                        <p>Œufs en Meurette</br>
+                            Jambon Persillé</br>
+                            Chèvre de Russilly</br>
+                            Pièce de Boeuf Charolaise</br>
+                            Nougat d'Epoisses.</p>
+                        </div>
+                    </div>
+                    <div class="flip">
+                        <div class="front"  style="background-image: url(https://cdn.pixabay.com/photo/2010/12/16/12/42/greek-feta-cheese-3548_1280.jpg)">
+                            <h1 class="text-shadow">PRODUITS LAITIERS</hi>
+                        </div>
+                        <div class="back">
+                            <h2>Produits laitiers</h2>
+                            <p>Nous travaillons avec la maison HESS, maître fromager à Beaune, pour une qualité et une gamme de fromages exceptionnelle. Il nous fourni également les produits laitiers et les œufs qui sont bien sûr aussi des produits locaux.</p>
+                        </div>
+                    </div>
+                    <div class="flip flip-vertical">
+                        <div class="front" style="background-image: url(https://cdn.pixabay.com/photo/2019/07/30/20/33/flower-4373800_1280.jpg)">
+                        <h1 class="text-shadow">LES ESCARGOTS</hi>
+                        </div>
+                        <div class="back">
+                            <h2>Les escargots</h2>
+                            <p>Les Escargots sont nés et élevés à la Ferme L’Escarg’Aujoux, chez Monsieur Peyrot Sylvain, héliciculteur à Etrigny en Saône et Loire, ce sont des Helix Aspersa Maxima..</p>
+                        </div>
+                    </div>
+                    <div class="flip">
+                        <div class="front" style="background-image: url(https://cdn.pixabay.com/photo/2016/07/11/12/25/wine-1509590_1280.jpg)">
+                            <h1 class="text-shadow">NOS VINS</hi>
+                        </div>
+                        <div class="back">
+                            <h2>Nos Vins</h2>
+                            <p>En accompagnement, une carte des vins de Givry "qui bouge", des vins de la Côte Chalonnaise, de Bourgogne et d'autre régions Françaises. Différents domaines tel que le domaine Thénard, Besson, Mouton, François Lumpp, Monneret …..</p>
+                        </div>
+                    </div>       
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+  
+{% endblock %}

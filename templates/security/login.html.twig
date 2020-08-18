@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+<div class="page-content p-4" id="content"> 
+    <!-- Toggle -->  
+        <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill  shadow-sm px-3 mb-4"><i class="fa fa-bars mr-0"></i></button> 
+
+        <!-- Titre  -->
+    <h1 class="display-4 ">Restaurant La Cadole</h1>
+    <p class="lead text-white mt-4 mb-5">Cuisine des terroirs. Gastronomie des saveurs.</p>
+    
+    <hr class="style">
+
+    <div class="row  ">
+        <div class="register col-6 offset-3 mt-5 align-items-center">
+
+            <form method="post">
+                {% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+
+                {% if app.user %}
+                    <div class="mb-3">
+                        You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                    </div>
+                {% endif %}
+
+                <h4 class="h4 mb-4 mt-4 font-weight-normal">Connectez-vous</h4>
+                <label for="inputEmail">Adresse Email</label>
+                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
+                <label for="inputPassword">Mot de passe</label>
+                <input type="password" name="password" id="inputPassword" class="form-control " required>
+
+                <input type="hidden" name="_csrf_token"
+                    value="{{ csrf_token('authenticate') }}"
+                >
+
+                {#
+                    Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                    See https://symfony.com/doc/current/security/remember_me.html
+
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" name="_remember_me"> Remember me
+                        </label>
+                    </div>
+                #}
+
+                {# Affichage du captcha avec la clé publique récupérée directement grâce à la passerelle faite dans twig.yaml #}
+                <div class="form-group mt-4">
+                    <div class="g-recaptcha" data-sitekey="{{ google_recaptcha_site_key }}"></div>
+                </div>
+
+                <button class="btn-register mt-4 mb-4" type="submit">
+                    Se connecter
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block stylesheets %}
+    {# Insertion du fichier JS dans le block stylesheets, ce n'est pas une erreur, la documentation de Recaptcha préconise en effet d'intégrer ce fichier JS dans le head #}
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+{% endblock %}

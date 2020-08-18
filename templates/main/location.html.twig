@@ -1,0 +1,41 @@
+{# templates/main/location.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="page-content p-4" id="content">
+    <!-- Toggle -->
+    <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill  shadow-sm px-3 mb-4"><i class="fa fa-bars mr-0"></i></button>
+
+   <!-- Titre  -->
+   <h1 class="display-4 ">Restaurant La Cadole</h1>
+   <p class="lead text-white mt-4 mb-5">Cuisine des terroirs. Gastronomie des saveurs.</p>
+  
+   <hr class="style">
+
+
+   <div class="row ">       
+       <div class="google-map col-8 offset-2 ">               
+           <div class="map-responsive ">
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1366.0389885126526!2d4.742005658393596!3d46.78306783146142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f2fee0dfb3f91d%3A0xcf209819ec79483a!2sRestaurant%20La%20Cadole!5e0!3m2!1sfr!2sfr!4v1596183728456!5m2!1sfr!2sfr"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+           </div>
+       </div>
+    </div>
+
+   <div class="row ">       
+        <div class="google-map col-8 offset-2 ">
+            <div class="text-left mt-4 pl-2">
+                <h4 id="text">Situé à 10 kilomètres de Chalon-sur-Saône,  
+                le restaurant La Cadole vous acceuille dans le coeur du village de Givry, terre des dommaines viticole de Bourgogne.</h4>
+            </div>
+        </div>
+    </div>
+            
+
+    <div class ="row">
+        <div class="title-effect col-10 offset-1  mt-5 ">
+            <h3 class="elegantshadow">Retrouvez-nous !</h3>
+        </div> 
+    </div>
+</div>
+{% endblock %}

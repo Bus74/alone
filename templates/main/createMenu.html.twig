@@ -1,0 +1,30 @@
+{# templates/main/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+<div class="page-content p-4" id="content">
+    <!-- Toggle -->
+    <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill  shadow-sm px-3 mb-4"><i class="fa fa-bars mr-0"></i></button>
+
+    <!-- Titre  -->
+    <h1 class="display-4 ">Restaurant La Cadole</h1>
+    <p class="lead text-white mt-4 mb-5">Cuisine des terroirs. Gastronomie des saveurs.</p>
+    
+    <hr class="style">
+
+        <div class="row ">
+            <div class="col-8 offset-2 text-white text-center"> 
+
+                <h2>Création du Menu</h2>
+
+                {# Affichage du formulaire #}
+                {{ form(form) }}
+            </div>
+        </div>
+</div>
+
+
+{% endblock %}

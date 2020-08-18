@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"><!--Lien CDN pour font awesome-->
+        <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}"><!--Lien vers le Css de bootstrap-->
+        <link rel="stylesheet" href="{{asset('css/style.css')}}">
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+
+ <!-- Vertical navbar -->
+
+<div class="row">
+
+    <div class="vertical-navbar col-1" id="sidebar">
+        <div class="row">
+            <div class="py-4 px-2 mb-3 bg-light">
+                <div class="row logo-cadole ml-1 justify-content-center media d-flex">
+                <img src="images/logo.png" alt="logo" width="250" class="mr-3 img-thumbnail shadow-sm">
+                <p class="py-2 mt-3 mr-3 mb-0">24 Rue de la République </br> 71640 Givry</p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="style">
+
+    <div class=row>
+        <div class="col-12 offset-0">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="{{ path('main') }}" class="nav-link text-dark font-italic">
+                            <i class="fas fa-home mr-3 text-dark fa-fw"></i>
+                            Accueil
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('menu') }}" class="nav-link text-dark font-italic">
+                            <i class="fas fa-utensils mr-3 text-dark fa-fw"></i>
+                            Notre Menu
+                    </a> 
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-dark font-italic">
+                            <i class="far fa-clock mr-3 text-dark fa-fw"></i>
+                            Horraires & Reservations
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="{{ path('location') }}" class="nav-link text-dark font-italic">
+                            <i class="fas fa-map-signs mr-3 text-dark fa-fw"></i>
+                            Géolocalisation
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="{{ path('presentation') }}" class="nav-link text-dark font-italic">
+                            <i class="fas fa-id-card-alt mr-3 text-dark fa-fw"></i>
+                            Qui sommes nous
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('card') }}" class="nav-link text-dark font-italic">
+                            <i class="fas fa-camera-retro mr-3 text-dark fa-fw"></i>
+                            Inspirations
+                    </a>
+                </li>         
+            </ul>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="row footer text-center">
+        <div class="container col-12 offset-0">
+            <h2>Retrouvez-nous</h2>
+            <div id="light">
+                <ul class="btn-list normal mb-1 mt-1">
+                    <li><a href="https://fr-fr.facebook.com/pages/category/French-Restaurant/Restaurant-La-Cadole-951096014940808/" class="btn-gradient facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://twitter.com/?lang=fr" class="btn-gradient twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/" class="btn-gradient instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.pinterest.fr/" class="btn-gradient pinterest"><i class="fab fa-pinterest-p"></i></a></li>   
+                </ul> 
+            </div>
+        </div>   
+    </div>
+
+</div>
+
+<!--page principale-->
+
+        {% block body %}{% endblock %}
+
+        {# Inclusion des fichiers JS généraux du site #}
+        <script src="{{ asset('js/jquery-3.5.1.slim.min.js') }}"></script>
+        <script src="{{ asset('js/popper.min.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('js/script.js') }}"></script>
+        {% block javascripts %}{% endblock %}
+</body>
+</html>

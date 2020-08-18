@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+<div class="page-content p-4" id="content"> 
+    <!-- Toggle -->  
+        <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill  shadow-sm px-3 mb-4"><i class="fa fa-bars mr-0"></i></button> 
+       
+        <div class="row  ">
+            <div class="col-8 offset-2 ">
+              <div class="test-error mt-4">  
+                                    
+                  <section class="error-body">
+                    <video preload="auto" class="background" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/396624/err.mp4" autoplay muted loop></video>
+                    <div class="message">
+                      <h1 t="404">404</h1>
+                      <div class="bottom">
+                        <p>Vous vous êtes perdu</p>
+                        <a href="{{ path('main') }}">Accueil</a>
+                      </div>
+                    </div>
+                  </section>
+              </div>  
+            </div>
+        </div>
+    </div>
+{% endblock %}
