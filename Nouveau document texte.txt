@@ -1,0 +1,11 @@
+appeler les pages d'erreur  : http://localhost:8000/_error/403
+
+page pour créer le menu  : http://localhost:8000/creer-le-menu
+
+page pour s'enregistrer : http://localhost:8000/register
+
+page pour se connecter : http://localhost:8000/login
+
+pour afficher le nouveau menu : http://localhost:8000/menu-cadole
+
+pour afficher la page principale : http://localhost:8000/main

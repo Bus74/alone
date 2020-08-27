@@ -68,6 +68,16 @@ class MainController extends AbstractController
         return $this->render('main/presentation.html.twig');
     }
 
+    /**
+     * @Route("/reservation", name="reservation")
+     */
+    public function reservation()
+    {
+
+        // Cette page appellera la vue templates/main/reservation.html.twig
+        return $this->render('main/reservation.html.twig');
+    }
+
     
  
 }

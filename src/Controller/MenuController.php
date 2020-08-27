@@ -73,6 +73,10 @@ class MenuController extends AbstractController
      */
     public function menuView(Menu $menu, Request $request)
     {
+
+         // Récupération de l'user actuellement connecté
+         $userConnected = $this->getUser();
+         
         return $this->render('menu/menuView.html.twig',[
         'menu' => $menu,
         ]);

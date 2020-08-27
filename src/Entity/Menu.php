@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Repository\MenuRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo; // Importation de la classe permettant de faire un slug
+use App\Entity\User;
 
 /**
  * @ORM\Entity(repositoryClass=MenuRepository::class)
@@ -26,6 +28,24 @@ class Menu
      * @ORM\Column(type="string", length=255)
      */
     private $content;
+
+    /**
+     * @ORM\Column(type="string", length=255, unique=true)
+     * @Gedmo\Slug(fields={"title"})
+     */
+    private $slug;
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="menus")

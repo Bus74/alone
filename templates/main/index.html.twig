@@ -23,11 +23,11 @@
     <!--Images-->
     <div class="row text-white ">
 
-        <div class=" col-lg-6 ">
+        <div class=" main-photo col-lg-6 ">
             <img class="first-photo " style="width:100%; height:auto" src="images/grapes.jpg" alt="grapes">
             <img class="first-photo  mt-4" style="width:100%; height:auto" src="images/plat.jpg" alt="plat">
         </div>
-        <div class="col-lg-6 "> 
+        <div class=" col-lg-6 "> 
             <img class="first-photo " style="width:100%; height:auto" src="images/vin.jpg" alt="vin">
             <img class="first-photo  mt-4" style="width:100%; height:auto" src="images/dessert1.jpg" alt="dessert">
         </div>
@@ -43,7 +43,7 @@
                     <div class=" white-card bg-white p-3 rounded my-5 ">
                         <h2 class= "lead font-italic mb-2 text-muted"> Notre menu </h2>
                         <p class="lead font-italic mb-0 text-muted">La Cadole vous propose une gastronomie régionale dont les plats, préparés selon les recettes traditionnelles, parlent des terroirs et des saveurs.</br>
-                        <a href="menu_cadole.html" class="btn btn-dark btn-lg active mt-4 mb-0" role="button" title="Lien 1">Menu</a></p>
+                        <a href="{{ path('menu') }}" class="btn btn-dark btn-lg active mt-4 mb-0" role="button" title="Lien 1">Menu</a></p>
                     </div> 
                 </div>
                 <div class="col-lg-6 mt-4">
@@ -64,7 +64,7 @@
                         <p class="lead font-italic mb-0 text-muted">Midi : 12h-14h.</br>
                         Soir : 19h-22h.</br>
                         Le restaurant La Cadole vous accueille tous les jours de la semaine à l'exception du  Mardi et du Mercredi.</br>
-                        <a href="#" class="btn btn-dark btn-lg active mt-4 mb-0" role="button" title="Lien 1">Réservation</a></p>
+                        <a href="{{ path('reservation') }}" class="btn btn-dark btn-lg active mt-4 mb-0" role="button" title="Lien 1">Réservation</a></p>
                     </div> 
                 </div>
             </div>
@@ -78,11 +78,43 @@
                     <div class="white-card bg-white p-3 rounded my-5 ">
                         <h2 class= "lead font-italic mb-2 text-muted"> Nous Trouver </h2>
                         <p class="lead font-italic mb-0 text-muted">Au coeur du centre ville de Givry, village à la renomée viticole réputé pour ses monuments historiques et ses vins...</br>
-                        <a href="map.html" class="btn btn-dark btn-lg active mt-4 mb-0" role="button" title="Lien 1">Géolocalisation</a></p>
+                        <a href="{{ path('location') }}" class="btn btn-dark btn-lg active mt-4 mb-0" role="button" title="Lien 1">Géolocalisation</a></p>
                     </div> 
                 </div>
                 <div class="col-lg-6 mt-4">
                 <img class="first-photo givry  mt-4" style="width:100%; height:auto" src="images/map.jpg" alt="dessert"> 
+                </div>
+            </div>
+        </div>
+
+
+        <div class="tag col-12 mt-2">
+            <div class="row discover">
+                <div class="col-lg-6 mt-4">
+                    <img class="first-photo  mt-4" style="width:100%; height:auto" src="images/mains.jpg" alt="mains"> 
+                </div>
+                <div class=" menu-test col-lg-6 d-flex align-self-center ">
+                    <div class=" white-card bg-white p-3 rounded my-5 ">
+                        <h2 class= "lead font-italic mb-2 text-muted"> Qui sommes nous </h2>
+                        <p class="lead font-italic mb-0 text-muted">
+                        Découvrez  histoire de notre restaurant et la passion qui nous anime!</br>
+                        <a href="{{ path('presentation') }}" class="btn btn-dark btn-lg active mt-4 mb-0" role="button" title="Lien 1">Découvrir</a></p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        <div class="tag col-12 mt-2">
+            <div class="row discover">
+                <div class=" menu-test col-lg-6 d-flex align-self-center ">
+                    <div class="white-card bg-white p-3 rounded my-5 ">
+                        <h2 class= "lead font-italic mb-2 text-muted"> Nos inspirations </h2>
+                        <p class="lead font-italic mb-0 text-muted">Découvrez quelques plats en photo. Notre carte est vivante et change au grée des saisons et des inspirations...</br>
+                        <a href="{{ path('card') }}" class="btn btn-dark btn-lg active mt-4 mb-0" role="button" title="Lien 1">Pour vous donner envie</a></p>
+                    </div> 
+                </div>
+                <div class="col-lg-6 mt-4">
+                <img class="first-photo givry  mt-4" style="width:100%; height:auto" src="images/chef.jpg" alt="plats"> 
                 </div>
             </div>
         </div>

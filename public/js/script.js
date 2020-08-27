@@ -1,23 +1,23 @@
 $(function() {
-    // Sidebar toggle behavior
+    // Comportement de la barre de nav avec le Toggle
     $('#sidebarCollapse').on('click', function() {
       $('#sidebar, #content').toggleClass('active');
     });
   });
+/*Toggle iphone*/ 
+  $('.nav-toggle').click(function(){
+    $('body').toggleClass('nav-open');
+  });
 
 
-
-
-
-
-  
+/*Fade in on scroll*/
   $(document).on("scroll", function() {
-    var pageTop = $(document).scrollTop();
-    var pageBottom = pageTop + $(window).height();
-    var tags = $(".tag");
+    let pageTop = $(document).scrollTop();
+    let pageBottom = pageTop + $(window).height();
+    let tags = $(".tag");
   
-    for (var i = 0; i < tags.length; i++) {
-      var tag = tags[i];
+    for (let i = 0; i < tags.length; i++) {
+      let tag = tags[i];
   
       if ($(tag).position().top < pageBottom) {
         $(tag).addClass("visible");
@@ -27,30 +27,11 @@ $(function() {
     }
   });
   
-
-
-  $(document).on("scroll", function() {
-    var pageTop = $(document).scrollTop();
-    var pageBottom = pageTop + $(window).height();
-    var tags = $(".tag");
-  
-    for (var i = 0; i < tags.length; i++) {
-      var tag = tags[i];
-  
-      if ($(tag).position().top < pageBottom) {
-        $(tag).addClass("visible");
-      } else {
-        $(tag).removeClass("visible");
-      }
-    }
-  });
-
-
 
 /*texte en mouvement*/ 
-var text = document.getElementById('text');
-var newDom = '';
-var animationDelay = 6;
+let text = document.getElementById('text');
+let newDom = '';
+let animationDelay = 6;
 
 for(let i = 0; i < text.innerText.length; i++)
 {
@@ -58,7 +39,7 @@ for(let i = 0; i < text.innerText.length; i++)
 }
 
 text.innerHTML = newDom;
-var length = text.children.length;
+let length = text.children.length;
 
 for(let i = 0; i < length; i++)
 {

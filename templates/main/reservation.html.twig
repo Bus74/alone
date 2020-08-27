@@ -1,0 +1,62 @@
+{# templates/main/menu.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="page-content p-4" id="content">
+    <!-- Toggle -->
+    <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill  shadow-sm px-3 mb-4"><i class="fa fa-bars mr-0"></i></button>
+
+<h1 class="display-4 ">Restaurant La Cadole</h1>
+<p class="lead text-white mt-4 mb-5">Nous contacter</p>
+
+<hr class="style">
+
+    <div class="row">
+        <div class="iphone col-8 offset-2 ">
+
+            <div class="phone">
+                <div class="screen">
+                    
+                    <div class="nav">
+                        <ul>
+                            <li><a href="{{ path('main') }}">Accueil</a></li>
+                            <li><a href="{{ path('menu') }}">Notre Menu</a></li>
+                            <li><a href="{{ path('location') }}">Géolocalisation</a></li>
+                            <li><a href="{{ path('presentation') }}">Qui sommes-nous</a></li>
+                            <li><a href="{{ path('card') }}">Inspirations</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="nav-toggle">
+                        <div class="icon"></div>
+                    </div>
+                    
+                    <div class="lower-screen">
+                        <div class="card">
+                            <img src="images/logo.png" alt="logo" width="200px" class="mr-3 img-thumbnail shadow-sm mb-3">
+                        </div>
+                        
+                        <div class="card">
+                            <h2>Contactez-nous</h2>
+                            <p>03 85 44 43 24<br>Le service du Midi : </br>12h00 -14h00
+                        </br>
+                            Le service du Soir : </br>19h00 -22h00</br>Fermé : le Mardi et le Mercredi</p>
+                        </div>
+                        
+                        <div class="card">
+                            <h2>24 Rue de la République</h2></br>
+                            <p> 71640 Givry</p>                            
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            
+        </div>
+    </div>
+
+
+</div>
+
+
+{% endblock %}
