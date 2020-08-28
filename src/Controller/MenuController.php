@@ -27,6 +27,7 @@ class MenuController extends AbstractController
 
     /**
      * @Route("/creer-le-menu", name="createMenu")
+     * @Security("is_granted('ROLE_USER')")
      */
     public function createMenu(Request $request){
 
@@ -45,6 +46,7 @@ class MenuController extends AbstractController
                 // Si le formulaire a été envoyé, on dump notre "article", qui est pré-rempli automatiquement avec les données provenant du formulaire !
                 //dump($newMenu);
 
+                $newMenu->setAuthor($this->getUser());
                 // récupération du manager des entités et sauvegarde en BDD de $newMenu
                 $em = $this->getDoctrine()->getManager();
 
@@ -69,7 +71,7 @@ class MenuController extends AbstractController
     /**
      * Page d'affichage du menu
      *
-     * @Route("/menu-cadole", name="menuView")
+     * @Route("/menu/{slug}/", name="menuView")
      */
     public function menuView(Menu $menu, Request $request)
     {

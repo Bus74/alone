@@ -1,6 +1,15 @@
-easy_admin:
-    entities:
-#        # List the entity class name you want to manage
-        - App\Entity\Card
-        - App\Entity\Menu
-        - App\Entity\User
+# easy_admin:
+#     entities:
+# #        # List the entity class name you want to manage
+
+#     Menu:
+#         class: App\Entity\Menu
+#         edit:
+#                 title: 'Modifier un menu'
+#                 fields:
+#                     - {property: 'title', label: 'Titre'}
+#                     - {property: 'content', type: 'fos_ckeditor', label: 'Contenu'}
+
+
+        
+

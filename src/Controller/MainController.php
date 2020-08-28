@@ -14,6 +14,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 
+
 /**
  * Liste des controleurs des pages ppales du site web. Le nom doit touours etre identique au nom du fichier
  */
@@ -34,8 +35,15 @@ class MainController extends AbstractController
     public function menu()
     {
 
+        $menuRepo=$this->getDoctrine()->getRepository(Menu::class);
+        $menus=$menuRepo->findAll();
+
+
+
         // Cette page appellera la vue templates/main/menu.html.twig
-        return $this->render('main/menu.html.twig');
+        return $this->render('main/menu.html.twig',[
+            'menus' => $menus,
+        ]);
     }
 
     /**
