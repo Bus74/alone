@@ -8,17 +8,19 @@
     <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill  shadow-sm px-3 mb-4"><i class="fa fa-bars mr-0"></i></button>
 
 <h1 class="display-4 ">Restaurant La Cadole</h1>
-<p class="lead text-white mt-4 mb-5">Nos Menus</p>
+<p class="lead text-white mt-4 mb-5">Nos Menus - Cliquez sur les liens</p>
 
 <hr class="style">
 
 <div class="row  text-center">
-    <div class="menu-view col-12 col-md-4 offset-md-4 pt-3 mt-5">
+    <div class="pimg5 col-10 offset-1">
+    <div class="menu-view col-10 offset-1 col-md-4 offset-md-4 pt-3 mt-5">
         {% for menu in menus %}
                 
             <h2 class="title-menu  mb-4"><a href="{{ path('menuView', {slug: menu.slug})}}">{{ menu.title }}</h2></a>
         
         {% endfor %}
+    </div>
     </div>
 
 </div>
