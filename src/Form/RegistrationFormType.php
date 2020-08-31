@@ -54,40 +54,6 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
-
-
-            //Champ prénom
-            ->add('firstname', TextType::class, [
-                'label' => 'Prenom',
-                'constraints' => [
-                    new NotBlank([
-                        'message' => 'Merci de renseigner votre prénom'
-                    ]),
-                    new Length([
-                        'min' => 2,
-                        'minMessage' => 'Votre prénom doit contenir au moins {{ limit }} caractères',
-                        'max' => 50,
-                        'maxMessage' => 'Votre prénom doit contenir au maximum {{ limit }} caractères'
-                    ]),
-                ]
-            ])
-
-            //Champ nom
-            ->add('lastname', TextType::class, [
-                'label' => 'Nom',
-                'constraints' => [
-                    new NotBlank([
-                        'message' => 'Merci de renseigner votre nom'
-                    ]),
-                    new Length([
-                        'min' => 2,
-                        'minMessage' => 'Votre nom doit contenir au moins {{ limit }} caractères',
-                        'max' => 50,
-                        'maxMessage' => 'Votre nom doit contenir au maximum {{ limit }} caractères'
-                    ]),
-                ]
-            ])
-
         ;
     }
 

@@ -28,7 +28,7 @@
 
     <hr class="style">
 
-    <div class=row>
+    <div class="row">
         <div class="col-12 offset-0">
             <ul class=" flex-column">
                 <li class="nav-item">
@@ -64,9 +64,29 @@
                 <li class="nav-item">
                     <a href="{{ path('card') }}" class="nav-link text-dark font-italic">
                             <i class="fas fa-camera-retro mr-3 text-dark fa-fw"></i>
-                            Inspirations
+                            Gallerie
                     </a>
-                </li>         
+                </li>
+                {% if app.user %}
+                    <li class="nav-item">
+                        <a href="{{ path('createMenu') }}" class="nav-link text-dark font-italic">
+                                <i class="fas fa-folder-plus mr-3 text-dark fa-fw"></i>
+                                Ajouter un menu
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ path('easyadmin') }}" class="nav-link text-dark font-italic">
+                                <i class="fas fa-briefcase mr-3 text-dark fa-fw"></i>
+                                Gestion
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ path('app_logout') }}" class="nav-link text-dark font-italic">
+                                <i class="fas fa-sign-out-alt mr-3 text-dark fa-fw"></i>
+                                Déconnexion
+                        </a>
+                    </li>
+                {% endif %}
             </ul>
         </div>
     </div>
@@ -74,7 +94,7 @@
     <!--Footer-->
     <div class="row footer text-center  d-lg-flex">
         <div class="container col-12 offset-0">
-            <h2>Retrouvez-nous</h2>
+            
             <div id="light">
                 <ul class="btn-list normal mb-1 mt-1">
                     <li><a href="https://fr-fr.facebook.com/pages/category/French-Restaurant/Restaurant-La-Cadole-951096014940808/" class="btn-gradient facebook"><i class="fab fa-facebook-f"></i></a></li>

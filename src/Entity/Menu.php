@@ -35,6 +35,11 @@ class Menu
      */
     private $slug;
 
+
+    public function __toString(){
+        return $this->title;
+    }
+
     public function getSlug(): ?string
     {
         return $this->slug;
